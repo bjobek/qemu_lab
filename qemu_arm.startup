@@ -1,0 +1,1 @@
+sudo qemu-system-arm   -M versatilepb   -cpu arm1176 -m 256 -net nic -net user,hostfwd=tcp::5022-:22 -net tap,ifname=vnet0,script=no,downscript=no   -dtb kernelFiles/versatile-pb-buster.dtb   -kernel kernelFiles/kernel-qemu-4.19.50-buster   -append 'root=/dev/sda2 panic=1'   -no-reboot -drive format=raw,file=./2020-02-13-raspbian-buster.img  
